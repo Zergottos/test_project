@@ -1,0 +1,21 @@
+{
+  "name": "test-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "browserify": "^14.0.0",
+    "grunt-browserify": "^5.0.0",
+    "load-grunt-tasks": "^3.5.2",
+    "path": "^0.12.7",
+    "uniq": "^1.0.1"
+  },
+  "devDependencies": {
+    "browserify": "^14.1.0"
+  },
+  "scripts": {
+    "build": "browserify main.js -o bundle.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
