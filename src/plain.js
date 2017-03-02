@@ -106,6 +106,13 @@ function createPlain() {
 					y: baseY + pointY
 				};
 				coordinates.push(point);
+
+				var pointValue = createPointValue();
+				pointValue.init(values[i]);
+				pointValue.container.x = point.x;
+				pointValue.container.y = point.y;
+
+				this.container.addChild(pointValue.container);
 			}
 
 			var fun = drawLine(coordinates);

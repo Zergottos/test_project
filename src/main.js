@@ -5,18 +5,18 @@ function start() {
 	stage.canvas.width = window.innerWidth;
 	stage.canvas.height = window.innerHeight;
 
+	stage.enableMouseOver(10);
+
 	var plain = createPlain();
 	plain.init(stage.canvas.width, stage.canvas.height);
-
-	// var button = createButton('Click me!', 26, function() {
-	// 	console.log('You clicked me!');
-	// });
 
 	plain.drawFunction([100, 200, 120, 70, 330]);
 
 	stage.addChild(plain.container);
 
-	stage.update();
+	createjs.Ticker.addEventListener("tick", function() {
+		stage.update();
+	});
 }
 
 function createButton(text, size, callback) {
