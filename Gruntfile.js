@@ -105,6 +105,17 @@ module.exports = function(grunt) {
 			grunt.log.writeln('Values: ' + objectData[n]);
 		}
 	});
+
+	grunt.registerTask('xlsTojson', 'Converts a file to JSON format.', function(dirName) {
+		var excel2Json = require('excel2json');
+
+		excel2Json('population.xls', function(err, output) {
+			if(err) {
+				console.log('Fail');
+			}
+			console.log('Success');
+		});
+	});
 };
 
 // --------------------------------------------------------------------------FUNCTIONS

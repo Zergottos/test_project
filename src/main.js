@@ -5,6 +5,8 @@ function start() {
 	stage.canvas.width = window.innerWidth;
 	stage.canvas.height = window.innerHeight;
 
+	initJSON();
+
 	stage.enableMouseOver(10);
 
 	var plain = createPlain();
