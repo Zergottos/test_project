@@ -5,14 +5,13 @@ function start() {
 	stage.canvas.width = window.innerWidth;
 	stage.canvas.height = window.innerHeight;
 
-	initJSON();
-
+console.log(data);
 	stage.enableMouseOver(10);
 
 	var plain = createPlain();
 	plain.init(stage.canvas.width, stage.canvas.height);
 
-	plain.drawFunction([100, 200, 120, 70, 330]);
+	plain.drawFunction(data['crime, total']);
 
 	stage.addChild(plain.container);
 

@@ -1,8 +1,36 @@
+var actual_JSON;
+var data;
+
+function load(response) {
+  // var preload = new createjs.LoadQueue();
+  // preload.addEventListener('fileload', handleFileComplete);
+
+	// Parse JSON string into object
+	actual_JSON = JSON.parse(response);
+  data = actual_JSON;
+
+  if(data !== undefined) {
+	  start();
+  }
+}
+
+function handleFileComplete(event) {
+  start();
+}
+
+function initJSON() {
+	var fileName = 'Prague/crime_cleared';
+
+	var result = loadJSON(fileName, load);
+}
+
 // Doesn't work on Chrome, because it does not allow ajax calls to local files.
-function loadJSON(callback) {
+function loadJSON(fileName, callback) {
+	var result;
 	var xobj = new XMLHttpRequest();
 	xobj.overrideMimeType("application/json");
-	xobj.open('GET', 'data/sample.json', true);
+	var url = 'data/' + fileName + '.json';
+	xobj.open('GET', url, true);
 	// Replace 'my_data' with the path to your file
 	xobj.onreadystatechange = function() {
 		if (xobj.readyState == 4 && xobj.status == "200") {
@@ -11,13 +39,5 @@ function loadJSON(callback) {
 			callback(xobj.responseText);
 		}
 	};
-	xobj.send(null);
-}
-
-function initJSON() {
-	loadJSON(function(response) {
-		// Parse JSON string into object
-		var actual_JSON = JSON.parse(response);
-		console.log(actual_JSON);
-	});
+	xobj.send('');
 }
