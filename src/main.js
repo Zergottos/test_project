@@ -3,12 +3,10 @@ var prizes = [];
 
 function start() {
 	var view1 = new View();
-	console.log(view1.getInfo());
 
 	view1.initDataSet(chartData);
 	view1.initGraphs();
-	view1.writeChart();
-	console.log(view1);
+	view1.writeChart('chart');
 }
 
 function start1() {

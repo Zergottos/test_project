@@ -48,8 +48,8 @@ function View () {
 		stockPanel.addStockGraph(graph1);
 	};
 
-	this.writeChart = function() {
-		this.chart.write('chart');
+	this.writeChart = function(name) {
+		this.chart.write(name);
 	}
 	this.getInfo = function() {
 		return this;
