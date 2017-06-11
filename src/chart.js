@@ -1,32 +1,4 @@
 AmCharts.ready(function(){
-
-	// AmCharts.makeChart( "chart", {
-	// 	"type": "serial",
-	// 	"dataProvider": chartData,
-	// 	"categoryField": "date",
-	// 	"graphs": [
-	// 		{
-	// 			"valueField": "val",
-	// 			"type": "line",
-	// 			"fillAlphas": 0,
-	// 			"lineColor": "#8d1cc6",
-	// 			"balloonText": "[[category]]: <b>[[value]]</b>"
-	// 		},
-	// 		{
-	// 			"valueField": "val1",
-	// 			"type": "line",
-	// 			"fillAlphas": 0,
-	// 			"balloonText": "[[category]]: <b>[[value]]</b>"
-	// 		}
-	// 	],
-	// 	"categoryAxis": {
-	// 		"autoGridCount": false,
-	// 		"gridCount": chartData.length,
-	// 		"gridPosition": "start",
-	// 		"labelRotation": 90
-	// 	}
-	// } );
-
 	var chart = new AmCharts.AmStockChart();
 	// chart.pathToImages = "amcharts/images/";
 
@@ -93,18 +65,18 @@ AmCharts.ready(function(){
 							  {period:"MAX", label:"MAX"}];
 	// chart.periodSelector = periodSelector;
 
-	chart.write("chart");
+	// chart.write("chart");
 });
 
 var chartData= [
 	{date: new Date(2011, 5, 1, 0, 0, 0, 0), val:10, val1: 10},
-	{date: new Date(2011, 5, 2, 0, 0, 0, 0), val:11, val1: 10},
-	{date: new Date(2011, 5, 3, 0, 0, 0, 0), val:12, val1: 10},
+	{date: new Date(2011, 5, 2, 0, 0, 0, 0), val:11, val1: 11},
+	{date: new Date(2011, 5, 3, 0, 0, 0, 0), val:12, val1: 13},
 	{date: new Date(2011, 5, 4, 0, 0, 0, 0), val:11, val1: 10},
-	{date: new Date(2011, 5, 5, 0, 0, 0, 0), val:10, val1: 10},
+	{date: new Date(2011, 5, 5, 0, 0, 0, 0), val:10, val1: 12},
 	{date: new Date(2011, 5, 6, 0, 0, 0, 0), val:11, val1: 10},
-	{date: new Date(2011, 5, 7, 0, 0, 0, 0), val:13, val1: 10},
-	{date: new Date(2011, 5, 8, 0, 0, 0, 0), val:14, val1: 10},
+	{date: new Date(2011, 5, 7, 0, 0, 0, 0), val:13, val1: 11},
+	{date: new Date(2011, 5, 8, 0, 0, 0, 0), val:14, val1: 14},
 	{date: new Date(2011, 5, 9, 0, 0, 0, 0), val:17, val1: 10},
-	{date: new Date(2011, 5, 10, 0, 0, 0, 0), val:13, val1: 10}
+	{date: new Date(2011, 5, 10, 0, 0, 0, 0), val:13, val1: 11}
 ];
