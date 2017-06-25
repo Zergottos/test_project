@@ -3,7 +3,7 @@ AmCharts.ready(function(){
 	// chart.pathToImages = "amcharts/images/";
 
 	var dataSet = new AmCharts.DataSet();
-	dataSet.dataProvider = chartData;
+	dataSet.dataProvider = exampleData;
 	dataSet.fieldMappings = [
 		{fromField:"val1", toField:"value1"},
 		{fromField:"val", toField:"value"},
@@ -68,7 +68,7 @@ AmCharts.ready(function(){
 	// chart.write("chart");
 });
 
-var chartData= [
+var exampleData = [
 	{date: new Date(2011, 5, 1, 0, 0, 0, 0), val:10, val1: 10},
 	{date: new Date(2011, 5, 2, 0, 0, 0, 0), val:11, val1: 11},
 	{date: new Date(2011, 5, 3, 0, 0, 0, 0), val:12, val1: 13},
