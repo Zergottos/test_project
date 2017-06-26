@@ -22,7 +22,7 @@ function fromObjectToArray(object) {
 		for(var prop in object) {
 			if(prop === 'period') {
 				var time = object[prop][index];
-				tempObject[prop] = 	new Date(time);
+				tempObject[prop] = 	new Date(time, 0, 0, 0, 0, 0, 0);
 				continue;
 			}
 			tempObject[prop] = 	object[prop][index];	

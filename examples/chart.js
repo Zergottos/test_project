@@ -63,7 +63,7 @@ AmCharts.ready(function(){
 							  {period:"YYYY", count:1, label:"1 year"},
 							  {period:"YTD", label:"YTD"},
 							  {period:"MAX", label:"MAX"}];
-	// chart.periodSelector = periodSelector;
+	chart.periodSelector = periodSelector;
 
 	// chart.write("chart");
 });

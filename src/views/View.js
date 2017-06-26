@@ -5,6 +5,23 @@ function View () {
 	this.data = {};
 	this.chart = new AmCharts.AmStockChart();
 
+	var panelsSettings = new AmCharts.PanelsSettings();
+	panelsSettings.svgIcon = false;
+	this.chart.panelsSettings = panelsSettings;
+
+	var categoryAxesSettings = new AmCharts.CategoryAxesSettings();
+	categoryAxesSettings.minPeriod = "YYYY";
+	categoryAxesSettings.maxSeries = 10;
+	this.chart.categoryAxesSettings = categoryAxesSettings;
+
+	var chartScrollbarSettings = new AmCharts.ChartScrollbarSettings();
+	chartScrollbarSettings.enabled = false;
+	this.chart.chartScrollbarSettings = chartScrollbarSettings;
+
+	var periodSelector = new AmCharts.PeriodSelector();
+	periodSelector.width = 40;
+	this.chart.periodSelector = periodSelector;
+
 	var stockPanel = new AmCharts.StockPanel();
 	this.chart.panels = [stockPanel];
 
