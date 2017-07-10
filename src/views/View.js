@@ -5,19 +5,24 @@ function View () {
 	this.data = {};
 	this.chart = new AmCharts.AmStockChart();
 
+	//---- Panel settings ----
 	var panelsSettings = new AmCharts.PanelsSettings();
 	panelsSettings.svgIcon = false;
 	this.chart.panelsSettings = panelsSettings;
 
+	//---- Category axis ----
 	var categoryAxesSettings = new AmCharts.CategoryAxesSettings();
-	categoryAxesSettings.minPeriod = "YYYY";
+	// categoryAxesSettings.minPeriod = "YYYY";
 	categoryAxesSettings.maxSeries = 10;
+	categoryAxesSettings.groupToPeriods = ["MM", "YYYY"];
 	this.chart.categoryAxesSettings = categoryAxesSettings;
 
+	//---- Scrollbar ----
 	var chartScrollbarSettings = new AmCharts.ChartScrollbarSettings();
 	chartScrollbarSettings.enabled = false;
 	this.chart.chartScrollbarSettings = chartScrollbarSettings;
 
+	//---- Periopd selector ----
 	var periodSelector = new AmCharts.PeriodSelector();
 	periodSelector.width = 40;
 	this.chart.periodSelector = periodSelector;

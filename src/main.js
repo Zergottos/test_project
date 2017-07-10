@@ -17,8 +17,9 @@ function start() {
 function fromObjectToArray(object) {
 	var result = [];
 	
-	var tempObject = {};
+	var tempObject;
 	for(var index = 0; index < object['period'].length; index++) {
+		tempObject = {};
 		for(var prop in object) {
 			if(prop === 'period') {
 				var time = object[prop][index];
